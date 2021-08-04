@@ -4,7 +4,7 @@
   onMount(async () => {
     const colors = ["#fff", "#ddd", "#ccc"];
     const animationBox = document.querySelector(".balls-animation");
-    
+
     const numBalls = 100;
     const balls = [];
 
@@ -21,7 +21,6 @@
 
       balls.push(ball);
       animationBox.append(ball);
-      
     }
 
     // Keyframes
@@ -68,12 +67,18 @@
   export let image2 = "../images/discord2.png";
   export let image3 = "../images/discord3.png";
   export let image4 = "../images/discord4.png";
+
+  export function handleScrollAbout(e) {
+    e.preventDefault();
+
+    scrollto("#about");
+  }
 </script>
 
 <div class="about">
   <div class="balls-animation" />
 
-  <div class="about-content" data-anime="left">
+  <div class="about-content" id="about" data-anime="left">
     <h1 style="color: #fff">Conheça nosso servidor</h1>
 
     <p>
@@ -95,12 +100,12 @@
         <h1>Compartilhe seus wallpapers</h1>
 
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essen
+          Você tem aquele wallpaper maneiro e gostaria de compartilhá-lo ? ou
+          então está com aquele Desktop que não está te agradando de jeito
+          nenhum (aqueles gramados ou figuras geométricas estranhas) e quer
+          colocar um do seu gosto ? Acabaram seus problemas ! Dos diversos chats
+          que temos um deles é o de publicar seu wallpaper ou então pegar um
+          "emprestado" pra você rsrs.
         </p>
       </div>
     </div>
@@ -110,12 +115,14 @@
         <h1>Tire suas dúvidas</h1>
 
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essen
+          Falando em chats...um dos mais usados sem dúvidas é o das linguagens,
+          feitos para quem esta com aquele TypeError: Cannot read property of
+          undefined (por exemplo. Se você já programou em JS...você me entende
+          kk), assim que você recebe esse erro, você pesquisa no Google e não
+          acha nada, já começa a subir o desespero, mas não se preocupe ! Você
+          pode mandar o código no canal da linguagem na qual você está tendo o
+          erro e marcar os Helpers dessa linguagem o servidor é sempre ativo e
+          com certeza aparecerá alguém pra te ajudar.
         </p>
       </div>
       <div class="image-content2">
@@ -130,12 +137,13 @@
       <div class="description3">
         <h1>Bata um papo com outros programadores</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essen
+          Quer conversar com alguém legal, que curte as mesmas coisas que você e
+          ainda posta print daquela distro Linux maneira ? Os chats pt e en são
+          feitos para isso, caso você ainda tenha uma pauta você pode levar a
+          mesma para a área de discussões (você tem que ver o debate sobre linux
+          vs windows), contamos várias histórias e brincamos uns com os outros,
+          e claro... sempre com muito respeito, até porque aqueles que faltaram
+          com respeito a alguém nem estão mais no servidor para contar história.
         </p>
       </div>
     </div>
@@ -144,12 +152,13 @@
       <div class="description4">
         <h1>Estude conosco</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essen
+          O servidor instrui as pessoas que literalmente não sabem nada sobre o
+          mundo da programação, então não se acanhe se você ainda não sabe a
+          diferença entre front-end e back-end, você é muito bem-vindo e
+          pensando carinhosamente em você nós fizemos alguns guias de introdução
+          de tecnologias e por onde você pode estudar gratuitamente, fora alguns
+          canais no YouTube que abordam o assunto, e que nós adoramos assistir
+          enquanto tomamos café (a gente está sempre tomando café, sério).
         </p>
       </div>
 
@@ -319,8 +328,117 @@
   div.description4 h1 {
     margin-bottom: 20px;
   }
-  
+
   div.image-content4 {
     grid-area: image-content4;
+  }
+
+  @media (max-width: 1200px) {
+    .collection1 {
+      display: grid;
+      width: 100%;
+      min-height: 600px;
+      height: auto;
+      grid-template-columns: 1fr !important;
+      grid-template-areas:
+        "image-content "
+        "description" !important;
+    }
+
+    div.image-content {
+      grid-area: image-content;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    div.description {
+      grid-area: description;
+      margin: 50px auto;
+      text-align: center;
+      padding-left: 0px !important;
+      color: #fff;
+    }
+
+    .collection2 {
+      display: grid;
+      width: 100%;
+      min-height: 600px;
+      height: auto;
+      grid-template-columns: 1fr !important;
+      grid-template-areas:
+        "image-content2 "
+        "description2" !important;
+    }
+
+    div.image-content2 {
+      grid-area: image-content2;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    div.description2 {
+      grid-area: description2;
+      margin: 50px auto;
+      text-align: center;
+      padding-left: 0px !important;
+      color: #fff;
+    }
+
+    .collection3 {
+      display: grid;
+      width: 100%;
+      min-height: 600px;
+      height: auto;
+      grid-template-columns: 1fr !important;
+      grid-template-areas:
+        "image-content3 "
+        "description3" !important;
+    }
+
+    div.image-content3 {
+      grid-area: image-content3;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    div.description3 {
+      grid-area: description3;
+      margin: 50px auto;
+      text-align: center;
+      padding-left: 0px !important;
+      color: #fff;
+    }
+
+    .collection4 {
+      display: grid;
+      width: 100%;
+      min-height: 600px;
+      height: auto;
+      grid-template-columns: 1fr !important;
+      grid-template-areas:
+        "image-content4 "
+        "description4" !important;
+    }
+
+    div.image-content4 {
+      grid-area: image-content4;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    div.description4 {
+      grid-area: description4;
+      margin: 50px auto;
+      text-align: center;
+      padding-left: 0px !important;
+      color: #fff;
+      margin-bottom: 200px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .image-content3, .image-content4 {
+      margin-left: -50px !important;
+    }
   }
 </style>

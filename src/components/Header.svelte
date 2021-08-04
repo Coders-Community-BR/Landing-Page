@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { Link } from "yrv";
+  import { scrollto } from "svelte-scrollto"
 
   onMount(async () => {
     const hamburger = document.querySelector(".hamburger");
@@ -39,17 +39,28 @@
       <img src={logo} class="logo-image" alt="" />
     </a>
     <ul class="nav-menu">
+
       <li class="nav-item">
-        <a href="/" class="nav-link">Services</a>
+        <a use:scrollto={'#about'} href="/" class="nav-link">Sobre</a>
       </li>
+
       <li class="nav-item">
-        <a href="/" class="nav-link">Blog</a>
+        <a use:scrollto={'#staff'} href="/" class="nav-link">Staff</a>
       </li>
+
       <li class="nav-item">
-        <a href="/" class="nav-link">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="/" class="nav-link">Contact</a>
+        <a
+          href="https://github.com/Coders-Community-BR"
+          target="_blank"
+          class="nav-link"
+          rel="noreferrer"
+          style="color: #fff; font-size: 30px;cursor: 'pointer'
+          ; display: inline-flex; align-items: center;
+          padding-right: 100px;"
+        >
+          <i class="fab fa-github" />
+          <p style="font-size: 16px !important; margin-left: 20px;">Github</p>
+        </a>
       </li>
     </ul>
     <div class="hamburger">

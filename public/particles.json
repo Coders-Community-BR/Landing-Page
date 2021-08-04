@@ -1,0 +1,27 @@
+{
+  "particles": {
+
+    "number": {
+      "value": 200
+    },
+
+    "color": {
+      "value": "#fff"
+    },
+    "shape": {
+      "type": "square",
+      "stroke": {
+        "width": 1,
+        "color": "#ccc"
+      }
+    },
+    "opacity": {
+      "value": 0.2,
+      "random": true
+    },
+
+    "size": {
+      "value": 5
+    }
+  }
+}

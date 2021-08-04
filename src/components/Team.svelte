@@ -1,6 +1,4 @@
 <script>
-
-    export const githubURL = "https://github.com/Coders-Community-BR"
     export let livrodjx = "../images/livrodjx.png"
     export let gaah = "../images/gaah.jpeg"
     export let coelho = "../images/coelho.jpeg"
@@ -11,52 +9,68 @@
     export let kinash = "../images/kinash.png"
 </script>
 
-<div class="section-caption">
+<div class="section-caption" id="staff">
     <h1>Membros da Staff</h1>
+    
 </div>
 <div class="team">
+    <div id="particles-js"></div>
     <div class="team-profile">
         <img src={gaah} alt="">
         <h1>Gabriel Dias</h1>
+        <p>Dono</p>
     </div>
 
     <div class="team-profile">
         <img src={livrodjx} alt="">
         <h1>Livrodjx</h1>
+        <p>Administrador</p>
     </div>
 
     <div class="team-profile">
         <img src={coelho} alt="">
         <h1>Gabriel Coelho</h1>
+        <p>Administrador</p>
     </div>
 
     <div class="team-profile">
         <img src={vczoika} alt="">
         <h1>Vinicius Sales</h1>
+        <p>Administrador</p>
     </div>
 
     <div class="team-profile">
         <img src={exatamente} alt="">
         <h1>Igor Pereira</h1>
+        <p>Moderador</p>
     </div>
 
     <div class="team-profile">
         <img src={pedrao} alt="">
         <h1>Pedro Henrique</h1>
+        <p>Moderador</p>
     </div>
 
     <div class="team-profile">
         <img src={yxqsnz} alt="">
         <h1>Yxqsnz</h1>
+        <p>Supervisor</p>
     </div>
 
     <div class="team-profile">
         <img src={kinash} alt="">
         <h1>Gabriel Kinash</h1>
+        <p>Supervisor</p>
     </div>
 </div>
 
 <style>
+    #particles-js {
+        z-index: 3;
+        position: absolute;
+        height: 700px;
+        background-color: transparent;
+    }
     div.section-caption {
         display: flex;
         width: 100%;
@@ -72,6 +86,7 @@
     }
 
     div.team {
+        z-index: 4;
         width: 100%;
         height: auto;
         background-color: #222;
@@ -83,6 +98,7 @@
     }
 
     div.team-profile {
+        z-index: 4;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -100,5 +116,10 @@
         color: whitesmoke;
         margin: 10px 0;
         font-size: 1.3rem !important;
+    }
+    div.team-profile p {
+        color: whitesmoke;
+        margin: 0px 0;
+      
     }
 </style>

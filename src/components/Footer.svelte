@@ -82,10 +82,15 @@
     .fa-heart {
         color: rgb(194, 15, 15) !important;
     }
-
+    
+    .social-medias a:hover {
+        color: rgb(194, 15, 15) !important;
+        transition: .2s;
+    }
     footer p a:hover {
 
         color: rgb(194, 15, 15) !important;
+        transition: .2s;
     }
 
 </style>

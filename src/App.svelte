@@ -3,7 +3,8 @@
   import About from './components/About.svelte'
   import Team from './components/Team.svelte'
   import Footer from "./components/Footer.svelte";
-
+  import { scrollto } from "svelte-scrollto"
+  
   export let count = 1;
   export function handleClick() {
     count += 1;
@@ -26,7 +27,7 @@
       <h2>Coders Community</h2>
       <p>O melhor servidor de programação !</p>
 
-      <a class="know-more" href="/sobre">Conhecer</a>
+      <a class="know-more" href="/" use:scrollto={'#about'}>Conhecer</a>
       <div class="social-media">
         <a
           href="https://discord.gg/CodersCommunity"
