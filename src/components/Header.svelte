@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { scrollto } from "svelte-scrollto"
+  import { scrollto } from "svelte-scrollto";
 
   onMount(async () => {
     const hamburger = document.querySelector(".hamburger");
@@ -23,10 +23,39 @@
       navMenu.classList.remove("active");
     }
 
+    function insertLogoHeader() {
+      let isMyImageExits = document.querySelector("img#my-logo");
+
+      if (isMyImageExits === null) {
+        let myImage = document.createElement("img");
+
+        myImage.src = "../images/logo2.png";
+        myImage.setAttribute('id', 'my-logo')
+        myImage.classList.add("my-logo");
+
+        document.body.append(myImage);
+      }
+      else {
+        isMyImageExits.classList.add('my-logo')
+      }
+    }
+
+    function removeLogoFromHeader() {
+      let isMyImageExits = document.querySelector("img#my-logo");
+
+      if(isMyImageExits !== null) {
+
+        isMyImageExits.classList.remove('my-logo')
+      }
+    }
     window.onscroll = () => {
-      window.scrollY > 500
-        ? myHeader.classList.add("sticky")
-        : myHeader.classList.remove("sticky");
+      if (window.scrollY > 500) {
+        myHeader.classList.add("sticky");
+        insertLogoHeader();
+      } else {
+        myHeader.classList.remove("sticky");
+        removeLogoFromHeader()
+      }
     };
   });
 
@@ -39,13 +68,12 @@
       <img src={logo} class="logo-image" alt="" />
     </a>
     <ul class="nav-menu">
-
       <li class="nav-item">
-        <a use:scrollto={'#about'} href="/" class="nav-link">Sobre</a>
+        <a use:scrollto={"#about"} href="/" class="nav-link">Sobre</a>
       </li>
 
       <li class="nav-item">
-        <a use:scrollto={'#staff'} href="/" class="nav-link">Staff</a>
+        <a use:scrollto={"#staff"} href="/" class="nav-link">Staff</a>
       </li>
 
       <li class="nav-item">
@@ -97,6 +125,14 @@
     align-items: center;
   }
 
+  :global(.my-logo) {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
   :global(.header.sticky) {
     display: none;
     border-bottom: 1px solid #023a8d0a;
@@ -107,6 +143,10 @@
     color: #fff !important;
     background-color: transparent;
     z-index: 999;
+  }
+
+  :global(.header.sticky .logo-image) {
+    display: block !important;
   }
 
   .logo-image {

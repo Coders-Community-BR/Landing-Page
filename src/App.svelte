@@ -162,4 +162,20 @@
     background-color: #c6c6c6;
     transition: 0.5s;
   }
+
+  @media (max-width: 620px) {
+
+    .banner-text {
+      margin-top: 70px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .banner-text {
+      margin-top: 200px;
+    }
+    .banner-text h2 {
+      font-size: 2.1rem !important;
+    }
+  }
 </style>

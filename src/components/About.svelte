@@ -437,8 +437,222 @@
   }
 
   @media (max-width: 720px) {
-    .image-content3, .image-content4 {
+    .image-content3,
+    .image-content4 {
       margin-left: -50px !important;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .about-content h1 {
+      font-size: 2.1rem !important;
+    }
+
+    .about-content p {
+      width: 500px;
+      font-size: 1.2rem;
+    }
+
+    .images-collections img {
+      width: 450px;
+      height: 250px;
+      margin-left: 100px;
+    }
+
+    .images-collections {
+      margin: 0 auto;
+      padding: 0 80px 0px 0px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    
+    div.collection1 .image-content img{
+      margin-left: 50px !important;
+    }
+
+    div.collection1 .description {
+      margin-left: 35px !important;
+    }
+
+    div.collection2 .image-content2 img {
+      margin-left: 20px !important;
+    }
+
+    div.collection2 .description2{
+      margin-left: 20px !important;
+    }
+
+    div.collection3 .image-content3 img {
+      margin-left: 50px !important;
+    }
+    div.collection3 .description3{
+      margin-left: 20px !important;
+    }
+
+    div.collection4 .image-content4 img {
+      margin-left: 50px !important;
+    }
+
+    div.collection4 .description4 {
+      margin-left: 10px !important;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .about-content h1 {
+      font-size: 1.8rem !important;
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      width: 400px;
+    }
+
+    div.collection1 .image-content img {
+      width: 375px;
+      height: 200px;
+      margin-left: 55px !important;
+    }
+    
+    div.collection1 .description {
+      margin-left: 55px !important;
+    }
+
+    div.collection2 .image-content2 img {
+      width: 375px;
+      height: 200px;
+      margin-left: 40px !important
+    }
+
+    div.collection2 .description2 {
+      font-size: 1rem;
+      width: 400px;
+      margin-left: 40px !important
+    }
+
+    div.collection3 .image-content3 img {
+      width: 375px;
+      height: 200px;
+      margin-left: 55px !important;
+    }
+
+    div.collection4 .image-content4 img {
+      width: 375px;
+      height: 200px;
+      margin-left: 55px !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+  
+
+    div.collection1 .image-content img{
+      margin-left: 10px !important;
+    }
+
+    div.collection1 .description {
+      margin-left: 10px !important;
+    }
+
+    div.collection2 .image-content2 img {
+
+      margin-left: 10px !important;
+    }
+    div.collection2 .description2 {
+      font-size: 0.8rem;
+      width: 350px;
+      margin-left: 20px !important;
+    }
+
+    div.collection3 .image-content3 {
+      margin-left: -90px !important;
+    }
+
+    div.collection3 .description3 {
+      font-size: 0.8rem;
+      width: 350px;
+      margin-left: -20px !important;
+    }
+
+    div.collection4 .image-content4 {
+      margin-left: -90px !important;
+    }
+
+    div.collection4 .description4 {
+      font-size: 0.8rem;
+      width: 350px;
+      margin-left: -20px !important;
+    }
+  }
+
+  @media (max-width: 370px) {
+
+    .about-content h1 {
+      font-size: 1.5rem !important;
+      text-align: center
+    }
+
+    .about-content p {
+      width: 275px;
+    }
+
+    .collection1 .image-content img {
+
+      width: 275px !important;
+      height: 150px !important;
+    }
+
+    .collection1 .description {
+      
+      padding-left: 20px !important;
+    }
+
+    .collection2 .image-content2 {
+
+      margin-left: 0px !important;
+    }
+
+    .collection2 .image-content2 img {
+      width: 275px !important;
+      height: 150px !important;
+    }
+    
+    .collection2 .description2 {
+      padding-left: 0px !important;
+    }
+
+    .collection2 .description2 p, 
+    .collection2 .description2 h1 {
+      width: 275px;
+    }
+
+    .collection3 .image-content3 img {
+      width: 275px !important;
+      height: 150px !important;
+    }
+
+    .collection3 .description3 {
+      padding-left: 0px !important;
+    }
+
+    .collection3 .description3 p, 
+    .collection3 .description3 h1 {
+      width: 275px;
+    }
+
+    .collection4 .image-content4 img {
+      width: 275px !important;
+      height: 150px !important;
+    }
+
+    .collection4 .description4 {
+      padding-left: 0px !important;
+    }
+
+    .collection4 .description4 p, 
+    .collection4 .description4 h1 {
+      width: 275px;
     }
   }
 </style>

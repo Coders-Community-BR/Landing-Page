@@ -69,7 +69,7 @@
         z-index: 3;
         position: absolute;
         height: 700px;
-        background-color: transparent;
+        background-color: #222;
     }
     div.section-caption {
         display: flex;
@@ -121,5 +121,19 @@
         color: whitesmoke;
         margin: 0px 0;
       
+    }
+
+    @media (max-width: 600px) {
+
+        #particles-js {
+            height: 2500px;
+            background-color: #222;
+        }
+    }
+
+    @media (max-width: 370px) {
+        .section-caption h1 {
+            text-align: center;
+        }
     }
 </style>

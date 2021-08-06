@@ -93,4 +93,20 @@
         transition: .2s;
     }
 
+
+    @media (max-width: 770px) {
+
+        section.finishing h1 {
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        section.finishing p {
+            text-align: center;
+        }
+
+        footer p{
+            text-align: center;
+        }   
+    }
 </style>
